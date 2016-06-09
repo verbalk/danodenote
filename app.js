@@ -6,7 +6,7 @@ var user = require('./routes/user');
 
 var remove 	= require("remove").removeSync;
 var engine 	= require('ejs-locals');
-//var http 					= require('http');
+var http 	= require('http');
 var path = require('path');
 var socketio = require("socket.io");
 var cookieParser = require('cookie-parser');
