@@ -1,4 +1,5 @@
 var cool = require('cool-ascii-faces');
+var routes = require('./routes');
 var express = require('express');
 var app = express();
 
