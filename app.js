@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
-//var os 					= require('os');
+var os 	= require('os');
 var routes 	= require('./routes');
-//var user					= require('./routes/user');
+var user = require('./routes/user');
 
 var remove 	= require("remove").removeSync;
 var engine 	= require('ejs-locals');
