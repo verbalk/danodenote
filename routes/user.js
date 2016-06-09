@@ -5,12 +5,12 @@ var url 					= require('url');
 var async					= require('async');
 var crypto 				= require("crypto");
 var remove 				= require("remove").removeSync;
-
+/*
 var tmpdir			= path.join(__dirname, "./upload_file");
 var dbdir				= path.join(__dirname, "./database");
 var download_tmp_dir				= path.join(__dirname, "./download_tmp");
 
-/*
+
 var sessionStore			= require(path.join(__dirname, './app.js')).sessionStore;
 var UserManager		= require(path.join(__dirname, './custom_module/user.js'));
 
