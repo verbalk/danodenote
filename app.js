@@ -8,7 +8,7 @@ var cookie	= require('cookie');
 //login session
 var session = require('express-session');
 
-var path 					= require('path');
+var path = require('path');
 
 var app = express();
 
