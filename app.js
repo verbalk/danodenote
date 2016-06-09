@@ -10,23 +10,43 @@ var cookie	= require('cookie');
 var session = require('express-session');
 var path = require('path');
 
+var authentication		= require(path.join(__dirname, './custom_module/authentication.js'));
+var system_event		= require(path.join(__dirname, './event_module/events_module.js'));
 
+var dbdir				= path.join(__dirname, "/database");
 
 
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.methodOverride());
+app.use(app.router);
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+app.use(express.cookieParser());
+app.use(session({
+	// 설정
+	store : module.exports.sessionStore,
+	key : 'sik', // 세션키
+	secret : 'keyboardpass', // 비밀키
+	cookie : {
+		maxAge : 1000 * 60 * 60 * 24 * 365 * 200, // 200년
+	},
+	saveUninitialized : true,
+	resave : false
+}));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', routes.index);
-app.get('pages/index', routes.index);
-app.get('pages/login', routes.login);
+app.get('/', authentication.isLogin, routes.index);
+app.get('/index', authentication.isLogin, routes.index);
+app.get('/login', authentication.isLogout, routes.login);
 
+app.post('/login_user', authentication.isLogout, user.login_user);
+app.get('/logout_user', authentication.isLogin, user.logout_user);
 
 
 /*
