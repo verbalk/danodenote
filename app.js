@@ -1,5 +1,4 @@
 var express = require('express');
-var routes = require('./routes');
 var cool = require('cool-ascii-faces');
 var socketio = require("socket.io");
 var remove 	= require("remove").removeSync;
@@ -8,9 +7,8 @@ var cookieParser = require('cookie-parser');
 var cookie	= require('cookie');
 //login session
 var session = require('express-session');
+
 var path = require('path');
-
-
 
 
 var app = express();
@@ -24,7 +22,6 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', routes.index);
-
 
 /*
 app.get('/', function(request, response) {
