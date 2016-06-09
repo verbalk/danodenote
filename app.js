@@ -17,33 +17,13 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.methodOverride());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-app.use(express.cookieParser());
-app.use(session({
-	// 설정
-	store : module.exports.sessionStore,
-	key : 'sik', // 세션키
-	secret : 'keyboardpass', // 비밀키
-	cookie : {
-		maxAge : 1000 * 60 * 60 * 24 * 365 * 200, // 200년
-	},
-	saveUninitialized : true,
-	resave : false
-}));
+app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', routes.index);
-app.get('/index',  routes.index);
-app.get('/login',  routes.login);
-
-app.post('/login_user',  user.login_user);
-app.get('/logout_user',  user.logout_user);
 
 
 /*
