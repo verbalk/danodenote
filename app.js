@@ -21,7 +21,7 @@ app.engine('ejs', engine);
 
 
 app.use(express.static(__dirname + '/public'));
-app.use(express.cookieParser());
+//app.use(express.cookieParser());
 // views is directory for all template files
 
 
