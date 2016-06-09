@@ -2,6 +2,8 @@ var express = require('express');
 var cool = require('cool-ascii-faces');
 var socketio = require("socket.io");
 var remove 	= require("remove").removeSync;
+//
+var engine 	= require('ejs-locals');
 
 var app = express();
 
