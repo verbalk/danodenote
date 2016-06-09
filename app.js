@@ -3,9 +3,10 @@ var cool = require('cool-ascii-faces');
 var socketio = require("socket.io");
 var remove 	= require("remove").removeSync;
 var engine 	= require('ejs-locals');
-//
-var cookieParser		= require('cookie-parser');
-var cookie				= require('cookie');
+var cookieParser = require('cookie-parser');
+var cookie	= require('cookie');
+//login session
+var session = require('express-session');
 
 var app = express();
 
