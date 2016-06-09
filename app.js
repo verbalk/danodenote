@@ -10,10 +10,7 @@ var cookie	= require('cookie');
 var session = require('express-session');
 var path = require('path');
 
-var authentication		= require(path.join(__dirname, './custom_module/authentication.js'));
-var system_event		= require(path.join(__dirname, './event_module/events_module.js'));
 
-var dbdir				= path.join(__dirname, "/database");
 
 
 var app = express();
