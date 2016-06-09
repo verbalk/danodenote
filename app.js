@@ -1,4 +1,5 @@
 var express = require('express');
+var routes = require('./routes');
 var cool = require('cool-ascii-faces');
 var socketio = require("socket.io");
 var remove 	= require("remove").removeSync;
