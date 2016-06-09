@@ -1,6 +1,6 @@
-var cool = require('cool-ascii-faces');
-var routes = require('./routes');
 var express = require('express');
+var cool = require('cool-ascii-faces');
+var socketio = require("socket.io");
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
