@@ -1,7 +1,5 @@
 exports.index = function(req, res,  next){
-
-	
-	res.render('pages/index', { 
+	res.render('index', { 
 		  title: 'main' 
 		});
 };
