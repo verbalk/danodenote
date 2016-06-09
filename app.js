@@ -24,8 +24,8 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', routes.index);
-app.get('/index', routes.index);
-app.get('/login', routes.login);
+app.get('pages/index', routes.index);
+app.get('pages/login', routes.login);
 
 
 
