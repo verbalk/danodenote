@@ -2,9 +2,9 @@ var path = require("path");
 var crypto = require("crypto");
 var fs = require("fs");
 
-var tmpdir = path.join(__dirname, "../upload_file");
-var dbdir = path.join(__dirname, "../database");
-var download_tmp_dir				= path.join(__dirname, "../download_tmp");
+var tmpdir = path.join(__dirname, "./upload_file");
+var dbdir = path.join(__dirname, "./database");
+var download_tmp_dir				= path.join(__dirname, "./download_tmp");
 
 module.exports.User = function(user){
 	this.user_id = user.user_id;

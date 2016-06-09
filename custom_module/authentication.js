@@ -3,9 +3,9 @@ var fs = require("fs");
 var async = require("async");
 var remove 				= require("remove").removeSync;
 
-var tmpdir			= path.join(__dirname, "../upload_file");
-var dbdir				= path.join(__dirname, "../database");
-var download_tmp_dir				= path.join(__dirname, "../download_tmp");
+var tmpdir			= path.join(__dirname, "./upload_file");
+var dbdir				= path.join(__dirname, "./database");
+var download_tmp_dir				= path.join(__dirname, "./download_tmp");
 
 var logout_timer = 1000 * 60 * 180; // 3시간
 
