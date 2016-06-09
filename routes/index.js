@@ -5,7 +5,7 @@ var url 					= require('url');
 var async					= require('async');
 var mime					= require('mime');
 
-var UserManager		= require(path.join(__dirname, './custom_module/user.js'));
+//var UserManager		= require(path.join(__dirname, './custom_module/user.js'));
 //var wip_function		= require(path.join(__dirname, './../custom_module/wip_function.js'));
 
 var tmpdir			= path.join(__dirname, "./upload_file");
