@@ -1,5 +1,5 @@
 exports.index = function(req, res,  next){
-	res.render('views/index', { 
+	res.render('../index', { 
 		  title: 'main' 
 		});
 };
