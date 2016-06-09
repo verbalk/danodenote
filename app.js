@@ -8,6 +8,8 @@ var cookie	= require('cookie');
 //login session
 var session = require('express-session');
 
+var path 					= require('path');
+
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
