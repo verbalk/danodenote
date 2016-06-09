@@ -38,12 +38,12 @@ app.use(session({
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', authentication.isLogin, routes.index);
-app.get('/index', authentication.isLogin, routes.index);
-app.get('/login', authentication.isLogout, routes.login);
+app.get('/', routes.index);
+app.get('/index',  routes.index);
+app.get('/login',  routes.login);
 
-app.post('/login_user', authentication.isLogout, user.login_user);
-app.get('/logout_user', authentication.isLogin, user.logout_user);
+app.post('/login_user',  user.login_user);
+app.get('/logout_user',  user.logout_user);
 
 
 /*
