@@ -3,13 +3,13 @@ var app = express();
 var os 	= require('os');
 var routes 	= require('./routes');
 var user = require('./routes/user');
-
 var remove 	= require("remove").removeSync;
 var engine 	= require('ejs-locals');
 var http 	= require('http');
 var path = require('path');
 var socketio = require("socket.io");
 var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 var cookie	= require('cookie');
 //login session
 var session = require('express-session');
