@@ -17,7 +17,7 @@ var session = require('express-session');
 //ar authentication		= require(path.join(__dirname, './custom_module/authentication.js'));
 //var system_event		= require(path.join(__dirname, './event_module/events_module.js'));
 //var dbdir				= path.join(__dirname, "/database");
-var morgan= require('morgan');
+var logger= require('morgan');
 var winston = require('winston');
 app.use(logger); //replaces your app.use(express.logger());
 
@@ -27,7 +27,7 @@ app.set('views', __dirname + '/views');
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 //app.use(express.favicon());
-//app.use(express.logger('dev'));
+app.use(express.logger('dev'));
 //app.use(express.bodyParser( {uploadDir:__dirname+'/image'} ));
 //app.use(express.cookieParser());
 
