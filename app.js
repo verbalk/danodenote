@@ -17,7 +17,8 @@ var session = require('express-session');
 //ar authentication		= require(path.join(__dirname, './custom_module/authentication.js'));
 //var system_event		= require(path.join(__dirname, './event_module/events_module.js'));
 //var dbdir				= path.join(__dirname, "/database");
-var logger = require('morgan');
+var morgan= require('morgan');
+var winston = require('winston');
 app.use(logger); //replaces your app.use(express.logger());
 
 
