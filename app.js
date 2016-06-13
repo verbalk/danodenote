@@ -14,10 +14,11 @@ var cookie	= require('cookie');
 //login session
 var session = require('express-session');
 
-//var authentication		= require(path.join(__dirname, './custom_module/authentication.js'));
+var authentication		= require(path.join(__dirname, './custom_module/authentication.js'));
 //var system_event		= require(path.join(__dirname, './event_module/events_module.js'));
-
 //var dbdir				= path.join(__dirname, "/database");
+var logger = require('morgan');
+app.use(logger); //replaces your app.use(express.logger());
 
 
 app.set('port', (process.env.PORT || 5000));
