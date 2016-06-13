@@ -26,7 +26,7 @@ app.set('views', __dirname + '/views');
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 //app.use(express.favicon());
-app.use(express.logger('dev'));
+//app.use(express.logger('dev'));
 //app.use(express.bodyParser( {uploadDir:__dirname+'/image'} ));
 //app.use(express.cookieParser());
 
