@@ -51,8 +51,8 @@ app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 */
 
 app.get('/', authentication.isLogin, routes.index);
-app.get('/index', authentication.isLogin, routes.index);
-app.get('/login', authentication.isLogout, routes.login);
+app.get('pages/index', authentication.isLogin, routes.index);
+app.get('pages/login', authentication.isLogout, routes.login);
 
 app.post('/login_user', authentication.isLogout, user.login_user);
 app.get('/logout_user', authentication.isLogin, user.logout_user);

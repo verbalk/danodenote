@@ -26,7 +26,7 @@ exports.login = function(req, res){
 		ejs_value.timeout = true;
 	}
 	
-	res.render("/login", ejs_value);
+	res.render("pages/login", ejs_value);
 };
 
 exports.index = function(req, res){
@@ -38,7 +38,7 @@ exports.index = function(req, res){
 	var ejs_value = {page:"index"};
 	ejs_value.user = req.session.user;
 	
-	res.render("/index", ejs_value);
+	res.render("pages/index", ejs_value);
 };
 
 
