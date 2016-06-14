@@ -11,15 +11,16 @@ var socketio = require("socket.io");
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cookie	= require('cookie');
-//login session
-var session = require('express-session');
+
+var session = require('express-session'); //login session
 
 //ar authentication		= require(path.join(__dirname, './custom_module/authentication.js'));
 //var system_event		= require(path.join(__dirname, './event_module/events_module.js'));
 //var dbdir				= path.join(__dirname, "/database");
-var logger= require('morgan');
+var morgan = require("morgan");
 var winston = require('winston');
-app.use(logger); //replaces your app.use(express.logger());
+//app.use(morgan()); // 고로, 4.X 버전에서는 morgan을 사용해야 함. logger와 같은 역할.
+app.use(morgan('dev'));
 
 
 app.set('port', (process.env.PORT || 5000));
@@ -27,7 +28,6 @@ app.set('views', __dirname + '/views');
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 //app.use(express.favicon());
-app.use(express.logger('dev'));
 //app.use(express.bodyParser( {uploadDir:__dirname+'/image'} ));
 //app.use(express.cookieParser());
 
