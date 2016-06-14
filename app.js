@@ -29,7 +29,7 @@ app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 //app.use(express.favicon());
 app.use(bodyParser());
-//app.use(express.cookieParser());
+app.use(cookieParser());
 
 app.use(express.static(__dirname + '/public'));
 /*
