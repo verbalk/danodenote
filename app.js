@@ -32,7 +32,7 @@ app.use(bodyParser());
 app.use(cookieParser());
 
 app.use(express.static(__dirname + '/public'));
-/*
+
 app.use(session({
 	// 설정
 	store : module.exports.sessionStore,
@@ -44,7 +44,7 @@ app.use(session({
 	saveUninitialized : true,
 	resave : false
 }));
-
+/*
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
