@@ -12,6 +12,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cookie	= require('cookie');
 
+var server = require('http').createServer(app);
+var io = require('../..')(server);
+
+
+
 var session = require('express-session'); //login session
 
 var authentication		= require(path.join(__dirname, './custom_module/authentication.js'));
