@@ -30,7 +30,7 @@ app.set('view engine', 'ejs');
 //app.use(express.favicon());
 app.use(bodyParser());
 app.use(cookieParser());
-app.use(app.router);
+//app.use(app.router); //**this line will be removed**
 app.use(express.static(__dirname + '/public'));
 
 app.use(session({
