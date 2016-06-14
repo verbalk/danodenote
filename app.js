@@ -50,7 +50,7 @@ app.use(express.methodOverride());
 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 */
 
-app.get('/', routes.index);
+app.get('/', authentication.isLogin, routes.index);
 
 
 app.listen(app.get('port'), function() {
