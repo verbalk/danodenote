@@ -54,5 +54,5 @@ exports.logout_user = function(req, res){
 		req.session.destroy(); // 세션 삭제
 		res.clearCookie('sik'); // 세션 쿠키 삭제
 	}
-	res.redirect("login");
+	res.redirect("/login");
 };
