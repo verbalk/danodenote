@@ -68,7 +68,7 @@ app.listen(app.get('port'), function() {
 
 
 //socket
-var io = require('socket.io')();
+
 var server=http.createServer(app);
 
 var io=socketio.listen(server);
