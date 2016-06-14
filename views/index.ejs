@@ -9,6 +9,13 @@
   <script type='text/javascript' src='/js/socket.io-stream.js'></script>
   <script src="js/main.js"></script>
   <link rel='stylesheet' href='/stylesheets/socket.css' />
+  <script>
+  var socket = io('https://danodenote.herokuapp.com/');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
   </head>
   <body>
   <% include ../layout/nav.ejs %>
