@@ -16,7 +16,7 @@ var session = require('express-session'); //login session
 
 var authentication		= require(path.join(__dirname, './custom_module/authentication.js'));
 var system_event		= require(path.join(__dirname, './event_module/events_module.js'));
-var dbdir				= path.join(__dirname, "/database");
+//var dbdir				= path.join(__dirname, "/database");
 var morgan = require("morgan");
 var winston = require('winston');
 
