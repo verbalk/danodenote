@@ -11,7 +11,7 @@ var socketio = require("socket.io");
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cookie	= require('cookie');
-var io = require('socket.io')(app);
+
 
 
 var session = require('express-session'); //login session
@@ -68,7 +68,7 @@ app.listen(app.get('port'), function() {
 
 
 //socket
-
+var io = require('socket.io')();
 var server=http.createServer(app);
 
 var io=socketio.listen(server);
