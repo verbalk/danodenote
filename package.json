@@ -19,6 +19,7 @@
     "ejs-locals": "1.0.2",
     "express": "4.13.3",
     "express-session": "1.13.0",
+    "io": "0.1.10",
     "morgan": "1.7.0",
     "remove": "0.1.5",
     "routes": "2.1.0",
