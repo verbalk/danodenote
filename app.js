@@ -51,11 +51,11 @@ app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 */
 
 app.get('/', authentication.isLogin, routes.index);
-app.get('pages/index', authentication.isLogin, routes.index);
-app.get('pages/login', authentication.isLogout, routes.login);
+app.get('/index', authentication.isLogin, routes.index);
+app.get('/login', authentication.isLogout, routes.login);
 
-app.post('pages/login_user', authentication.isLogout, user.login_user);
-app.get('pages/logout_user', authentication.isLogin, user.logout_user);
+app.post('/login_user', authentication.isLogout, user.login_user);
+app.get('/logout_user', authentication.isLogin, user.logout_user);
 
 
 app.listen(app.get('port'), function() {
