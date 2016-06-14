@@ -11,7 +11,7 @@ var socketio = require("socket.io");
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cookie	= require('cookie');
-var io = require('../..')(server);
+var io = require('socket.io')(server);
 
 
 
