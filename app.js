@@ -30,7 +30,7 @@ app.set('view engine', 'ejs');
 //app.use(express.favicon());
 app.use(bodyParser());
 app.use(cookieParser());
-
+app.use(app.router);
 app.use(express.static(__dirname + '/public'));
 
 app.use(session({
@@ -46,7 +46,7 @@ app.use(session({
 }));
 /*
 app.use(express.methodOverride());
-app.use(app.router);
+
 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 */
 
