@@ -70,8 +70,8 @@ app.listen(app.get('port'), function() {
 //socket
 
 var server=http.createServer(app);
-
-var io=socketio.listen(server);
+var io = require('socket.io').listen(server);
+//var io=socketio.listen(server);
 
 io.sockets.on( 'connection', function(socket){
 	socket.on( 'join', function(data){
