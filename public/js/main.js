@@ -233,7 +233,7 @@ $(function() {
   socket.on('login', function (data) {
     connected = true;
     // Display the welcome message
-    var message = " [ localhost : 8000 ]";
+    var message = "WelCome to #o#k#t.I";
     log(message, {
       prepend: true
     });

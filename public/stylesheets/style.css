@@ -131,7 +131,7 @@ header{
 }
 .main-subtitle{
   font-size: 15px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 .searchbox{
@@ -146,7 +146,7 @@ header{
     background: #ffffff;
     padding: 5px;
     width: 350px;
-    height: 370px;
+    height: 400px;
 }
 .login-input-box{
     display: block;
