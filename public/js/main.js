@@ -23,7 +23,7 @@ $(function() {
   var lastTypingTime;
   var $currentInput = $usernameInput.focus();
 
-  var socket = io('https://danodenote.herokuapp.com/');
+  var socket = io();
   socket.on('news', function (data) {
     console.log(data);
     socket.emit('my other event', { my: 'data' });
