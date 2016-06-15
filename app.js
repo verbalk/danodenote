@@ -46,11 +46,11 @@ app.use(session({
 	saveUninitialized : true,
 	resave : false
 }));
-
+/*
 app.use(express.methodOverride());
 
 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-
+*/
 
 app.get('/', authentication.isLogin, routes.index);
 app.get('/index', authentication.isLogin, routes.index);
