@@ -1,5 +1,5 @@
 var express = require('express');
-var app = express();
+var app = require('express')();
 var os 	= require('os');
 var routes 	= require('./routes');
 var user = require('./routes/user');
@@ -66,8 +66,8 @@ app.get('/logout_user', authentication.isLogin, user.logout_user);
 //socket
 
 
-var server=http.createServer(app);
-var io=socketio.listen(server);
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 io.sockets.on( 'connection', function(socket){
 	socket.on( 'join', function(data){
