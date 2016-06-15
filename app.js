@@ -60,10 +60,6 @@ app.post('/login_user', authentication.isLogout, user.login_user);
 app.get('/logout_user', authentication.isLogin, user.logout_user);
 
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
-
 
 
 
@@ -89,11 +85,15 @@ io.sockets.on( 'connection', function(socket){
 
 module.exports.io = io;
 
-
+/*
 server.listen(5000, function(){ 
 	console.log('server port: ' + app.get('port'));
 });
+*/
 
+app.listen(app.get('port'), function() {
+  console.log('server port: ' + app.get('port'));
+});
 
 
 //Chatroom
