@@ -91,7 +91,7 @@ server.listen(5000, function(){
 });
 */
 
-app.listen(server.listen('port'), function() {
+app.listen(app.get('port'), function() {
   console.log('server port: ' + app.get('port'));
 });
 
