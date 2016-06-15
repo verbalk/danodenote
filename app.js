@@ -25,7 +25,7 @@ var winston = require('winston');
 app.use(morgan('dev'));  // 4.X 버전에서는 morgan을 사용해야 함. logger와 같은 역할.
 
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 5000));
 app.set('views', __dirname + '/views');
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
@@ -60,10 +60,15 @@ app.post('/login_user', authentication.isLogout, user.login_user);
 app.get('/logout_user', authentication.isLogin, user.logout_user);
 
 
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
+
+
+
 
 //socket
-//var server=http.createServer(app);
-//var io = require('socket.io').listen(httpServer);
+
 
 var server=http.createServer(app);
 var io=socketio.listen(server);
@@ -85,7 +90,7 @@ io.sockets.on( 'connection', function(socket){
 module.exports.io = io;
 
 
-server.listen(3000, function(){ 
+server.listen(5000, function(){ 
 	console.log('server port: ' + app.get('port'));
 });
 
