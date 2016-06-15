@@ -155,7 +155,7 @@ header{
     margin: 2px auto;
     width: 300px;
     height: 40px;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #eaeaea;
     text-indent: 15px;
 }
 .login-input-box .login:hover{
