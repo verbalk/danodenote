@@ -68,7 +68,7 @@ app.listen(app.get('port'), function() {
 
 
 //socket
-var httpServer =http.createServer(app).listen(3000, function(req,res){
+var server =http.createServer(app).listen(3000, function(req,res){
   console.log('Socket IO server has been started');
 });
 // upgrade http server to socket.io server
