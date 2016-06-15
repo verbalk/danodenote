@@ -60,20 +60,13 @@ app.post('/login_user', authentication.isLogout, user.login_user);
 app.get('/logout_user', authentication.isLogin, user.logout_user);
 
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
-});
-
-
-
 
 //socket
-var server=http.createServer(app);
-// upgrade http server to socket.io server
-var io = require('socket.io').listen(httpServer);
-
 //var server=http.createServer(app);
-//var io=socketio.listen(server);
+//var io = require('socket.io').listen(httpServer);
+
+var server=http.createServer(app);
+var io=socketio.listen(server);
 
 io.sockets.on( 'connection', function(socket){
 	socket.on( 'join', function(data){
