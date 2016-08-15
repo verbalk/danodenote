@@ -108,7 +108,7 @@ a:focus {
   text-decoration: none;
 }
 p {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.5;
 }
 p.lead {
@@ -135,7 +135,7 @@ h6 {
     font-size: 40px;
   }
   p {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 hr {
