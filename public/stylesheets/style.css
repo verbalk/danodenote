@@ -18,6 +18,9 @@ section {
   color: white;
   background-color: #222222;
 }
+#slideImgL{
+  width: 100%;
+}
 @media (max-width: 767px) {
   section {
     padding: 75px 0;
