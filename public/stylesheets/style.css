@@ -18,7 +18,7 @@ section {
   color: white;
   background-color: #222222;
 }
-#slideImgL{
+img#slideImgL{
   width: 100%;
 }
 @media (max-width: 767px) {
