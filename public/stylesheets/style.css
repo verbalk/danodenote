@@ -108,7 +108,7 @@ a:focus {
   text-decoration: none;
 }
 p {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.5;
 }
 p.lead {
@@ -1182,7 +1182,7 @@ body.vintage .testimonials .testimonials-carousel .owl-controls .owl-next {
 .contents-box{
   margin-top: 20px;
   margin-right: 25px;
-  width: 540px;
+  width: auto;
   text-align: justify;
 }
 .btnA{
