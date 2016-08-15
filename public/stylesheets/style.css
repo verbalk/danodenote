@@ -8,7 +8,7 @@ body {
 .content-row {
   margin-top: 30px;
 }
-p {
+p.contents-small {
   font-size: 15px;
   line-height: 1.5;
 }
