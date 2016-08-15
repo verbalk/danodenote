@@ -1,47 +1,54 @@
 var express = require('express');
-var routes = require('./routes');
+var app = require('express')();
+var os 	= require('os');
+var routes 	= require('./routes');
 var user = require('./routes/user');
-var engine = require('ejs-locals');
-/*var bodyParser = require('body-parser');*/
-var http = require('http');
+var remove 	= require("remove").removeSync;
+var engine 	= require('ejs-locals');
+var http 	= require('http');
 var path = require('path');
-var app = express();
+var socketio = require("socket.io");
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var cookie	= require('cookie');
 
 
 
-// all environments
-app.set('port', process.env.PORT || 5000);
+var session = require('express-session'); //login session
+
+
+app.use(morgan('dev'));  // 4.X 버전에서는 morgan을 사용해야 함. logger와 같은 역할.
+
+
+app.set('port', (process.env.PORT || 5000));
 app.set('views', __dirname + '/views');
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-//parse application/json
-/*app.use(bodyParser()); // pull information from html in POST
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());*/
+//app.use(express.favicon());
+app.use(bodyParser());
+app.use(cookieParser());
+//app.use(app.router); //**this line will be removed**
+app.use(express.static(__dirname + '/public'));
 
+
+/*
 app.use(express.methodOverride());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
 
-
-// development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
-}
+app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+*/
 
 app.get('/', routes.index);
-app.get('/',routes.index);
-app.get('/new_letter', routes.index)
-//app.post('/demo', routes.index);
-
-
-app.get('/users', user.list);
 
 
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('server start! port: ' + app.get('port'));
+/*
+server.listen(5000, function(){ 
+	console.log('server port: ' + app.get('port'));
 });
+*/
+
+server.listen(app.get('port'), function() {
+  console.log('server port: ' + app.get('port'));
+});
+
 
