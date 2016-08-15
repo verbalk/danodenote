@@ -8,6 +8,10 @@ body {
 .content-row {
   margin-top: 30px;
 }
+p {
+  font-size: 15px;
+  line-height: 1.5;
+}
 section {
   padding: 100px 0;
 }
